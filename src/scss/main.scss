@@ -1,0 +1,284 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../node_modules/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+$primary: #d73644;
+$secondary: #f7b3be;
+$dark: #272727;
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/variables-dark';
+
+// 4. Include any default map overrides here
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 2,
+    6: $spacer * 2.5,
+    7: $spacer * 3,
+    8: $spacer * 3.5,
+    9: $spacer * 4,
+);
+
+$position-values: (
+    0: 0,
+    7: 7%,
+    50: 50%,
+    100: 100%,
+);
+
+$zindex-levels: (
+    n1: -1,
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+);
+
+// 5. Include remainder of required parts
+@import '../../node_modules/bootstrap/scss/maps';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/root';
+
+// 6. Optionally include any other parts as needed
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/helpers';
+
+$utilities: map-merge(
+    $utilities,
+    (
+        'width':
+            map-merge(
+                map-get($utilities, 'width'),
+                (
+                    responsive: true,
+                )
+            ),
+        'rounded':
+            map-merge(
+                map-get($utilities, 'rounded'),
+                (
+                    responsive: true,
+                )
+            ),
+        'font-size':
+            map-merge(
+                map-get($utilities, 'font-size'),
+                (
+                    responsive: true,
+                )
+            ),
+        'color':
+            map-merge(
+                map-get($utilities, 'color'),
+                (
+                    values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($greens)),
+                )
+            ),
+        'z-index':
+            map-merge(
+                map-get($utilities, 'z-index'),
+                (
+                    responsive: true,
+                )
+            ),
+    )
+);
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import '../../node_modules/bootstrap/scss/utilities/api';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$mega-menu-margin: 20px;
+
+body, * {
+    font-family: 'Open Sans';
+}
+
+/** Modifications */
+.navbar .megamenu {
+    padding: 1rem;
+    margin: 0 $mega-menu-margin;
+    border-radius: 1rem;
+    max-width: calc(100% - $mega-menu-margin * 2);
+    box-shadow: 0px 10px 30px -5px rgba($color: #000000, $alpha: 0.7);
+}
+
+.slick-list {
+    margin: 0 -5px;
+}
+.slick-slide > div {
+    padding: 0 5px;
+}
+
+.deals-of-week {
+    background-image: url('https://www.singals.ca/cdn/shop/files/top-view-raw-pasta-with-greens-vegetables-white-table_1.png?v=1689921060');
+    background-size: cover;
+    background-position: center;
+    // padding: 3rem 4rem !important;
+    border-radius: 1.5rem;
+}
+
+.footer {
+    background-color: #1b0003;
+}
+
+.slick-arrow::before {
+    // content: '\ea6e' !important;
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    opacity: 1 !important;
+}
+
+.slick-next::before {
+    content: '\ea6e' !important;
+}
+.slick-prev::before {
+    content: '\EA64' !important;
+}
+
+.page-title {
+    background-image: url(/assets/svg/page-title-bg.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.react-loading-skeleton {
+    z-index: -1;
+    // position: relative;
+}
+
+/** Utilities */
+.aspect-1\/1 {
+    aspect-ratio: 1/1;
+}
+
+.image-square {
+    @extend .aspect-1\/1;
+    width: 100%;
+    object-fit: contain;
+    -o-object-fit: contain;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: 10px;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        margin: 0;
+    }
+}
+
+.navbar .offcanvas .navbar-nav .nav-item {
+    white-space: nowrap;
+}
+
+.navbar .container.overflow-auto::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.navbar .container.overflow-auto::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.navbar .container.overflow-auto::-webkit-scrollbar-thumb {
+    background-color: var(--bs-tertiary-color);
+    border-radius: 100px;
+
+    &:hover {
+        background-color: $dark;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.rounded-bottom-end {
+    border-bottom-right-radius: 10px;
+}
+
+.truncate-lines-2 {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/** Media Queries */
+@media all and (min-width: 992px) {
+    .navbar .has-megamenu {
+        position: static !important;
+    }
+    .navbar .has-megamenu:hover {
+        .megamenu {
+            display: block;
+        }
+    }
+    .navbar .megamenu {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar.fixed-top .navbar-collapse,
+    .navbar.sticky-top .navbar-collapse {
+        overflow-y: auto;
+        max-height: 90vh;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .aspect-md-1\/1 {
+        aspect-ratio: 1/1;
+    }
+    .aspect-md-3\/4 {
+        aspect-ratio: 3 / 4;
+    }
+}
+
+@media (max-width: 575px) {
+    .offcanvas.offcanvas-start#offcanvasNavbar {
+        --bs-offcanvas-width: 300px;
+    }
+}
+@media (max-width: 300px) {
+    .offcanvas.offcanvas-start#offcanvasNavbar {
+        --bs-offcanvas-width: 200px;
+    }
+}
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/remixicon/fonts/remixicon.css';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../node_modules/react-loading-skeleton/dist/skeleton.css';
+@import '../../node_modules/react-toastify/scss/main.scss';
+@import '../../node_modules/animate.css/animate.min.css';
