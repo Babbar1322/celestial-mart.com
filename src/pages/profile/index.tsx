@@ -18,7 +18,7 @@ const ProfilePage = memo(() => {
                 <Typography fontSize={2} fontWeight='semibold' marginBottom="4">User Information</Typography>
                 <div className="row align-items-center">
                     <div className="col-sm-3">
-                        <img src="/assets/images/default-user.jpeg" alt="" className='image-square rounded-4' />
+                        <img src="/ecommerce/assets/images/default-user.jpeg" alt="" className='image-square rounded-4' />
                     </div>
                     <div className="col">
                         <Typography fontSize={3} fontWeight='semibold'>{user?.name}</Typography>

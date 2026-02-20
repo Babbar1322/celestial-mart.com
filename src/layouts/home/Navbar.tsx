@@ -23,7 +23,7 @@ const Navbar = React.memo(() => {
         <div className="navbar navbar-expand-lg bg-white">
             <Container>
                 <RouterLink to="/" className="nav-brand w-50 w-md-25 order-1">
-                    <img src="/assets/images/logo-dark.png" className="w-100" />
+                    <img src="/ecommerce/assets/images/logo-dark.png" className="w-100" />
                 </RouterLink>
                 {offset > 0 && (<div style={{height: 150}}></div>)}
                 <div className={cn("navbar row align-items-center justify-content-between w-100 w-lg-50 mx-lg-5 order-3 order-lg-2 m-0 z-2 animate__animated animate__faster", {'position-fixed top-0 start-0 end-0 w-100 bg-white px-3 animate__slideInDown shadow': offset > 0 && isMobile})}>
@@ -37,7 +37,7 @@ const Navbar = React.memo(() => {
                     >
                         {/* <RemixIcon name="menu-2-line" /> */}
                         {/* <div className="d-flex align-items-center gap-2"> */}
-                            <img src="/assets/svg/icons/menu.svg" alt="" width={25} />
+                            <img src="/ecommerce/assets/svg/icons/menu.svg" alt="" width={25} />
                             {/* <Typography style={{fontSize: 12}} truncate>Menu</Typography> */}
                         {/* </div> */}
                     </button>

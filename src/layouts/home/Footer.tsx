@@ -9,7 +9,7 @@ const Footer: FC<FooterProps> = memo((): JSX.Element => {
             <div className="bg-dark mt-5 p-5 w-100">
                 <div className="row g-5 m-2 border-bottom border-white align-items-center justify-content-center pb-5">
                     <div className="col-9 col-sm-6 col-md-4 col-lg-3">
-                        <img src="/assets/images/logo-white.png" className="w-100" />
+                        <img src="/ecommerce/assets/images/logo-white.png" className="w-100" />
                     </div>
 
                     <div className="col-lg-3"></div>

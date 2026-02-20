@@ -19,14 +19,14 @@ const HomePage: FC = () => {
                 <Slider nextArrow={<RightArrow />} prevArrow={<LeftArrow />} infinite={false}>
                     <div className="w-100 fs-1 text-center" style={{ minHeight: 200 }}>
                         <img
-                            src="/assets/images/slider/banner-1.png"
+                            src="/ecommerce/assets/images/slider/banner-1.png"
                             alt=""
                             className="w-100 rounded-3 rounded-md-4 rounded-lg-5"
                         />
                     </div>
                     <div className="w-100 fs-1 text-center" style={{ minHeight: 200 }}>
                         <img
-                            src="/assets/images/slider/banner-2.png"
+                            src="/ecommerce/assets/images/slider/banner-2.png"
                             alt=""
                             className="w-100 rounded-3 rounded-md-4 rounded-lg-5"
                         />
@@ -79,21 +79,21 @@ const HomePage: FC = () => {
                             <Typography fontSize={1} fontWeight='bold' color='warning' right>15% OFF</Typography>
                             <Typography fontSize={1} fontWeight='bold' color='white' right>Drinks</Typography>
                         </div>
-                        <img src="/assets/images/banner/alchohol.jpg" alt="" className="w-100 rounded-4" />
+                        <img src="/ecommerce/assets/images/banner/alchohol.jpg" alt="" className="w-100 rounded-4" />
                     </div>
                     <div className="rounded-4 overflow-hidden position-relative" style={{minWidth: 350}}>
                         <div className="position-absolute bottom-7 start-7">
                             <Typography fontSize={1} fontWeight='bold' color='warning'>10% OFF</Typography>
                             <Typography fontSize={1} fontWeight='bold' color='white'>Smoke &amp; Vapes</Typography>
                         </div>
-                        <img src="/assets/images/banner/cigarette.jpg" alt="" className="w-100 rounded-4" />
+                        <img src="/ecommerce/assets/images/banner/cigarette.jpg" alt="" className="w-100 rounded-4" />
                     </div>
                     <div className="rounded-4 overflow-hidden position-relative" style={{minWidth: 350}}>
                         <div className="position-absolute bottom-7 end-7">
                             <Typography fontSize={1} fontWeight='bold' color='warning' right>15% OFF</Typography>
                             <Typography fontSize={1} fontWeight='bold' color='white' right>Grocery</Typography>
                         </div>
-                        <img src="/assets/images/banner/grocery.jpg" alt="" className="w-100 rounded-4" />
+                        <img src="/ecommerce/assets/images/banner/grocery.jpg" alt="" className="w-100 rounded-4" />
                     </div>
                 </Slider>
             </Container>

@@ -56,7 +56,7 @@ const ShopPage: FC = memo(() => {
                     aria-label="Toggle navigation"
                 >
                     {/* <RemixIcon name="menu-3-line" /> Categories */}
-                    <div className='d-flex align-items-center gap-2'><img src="/assets/svg/icons/category.svg" alt="" width={20} /> Categories</div>
+                    <div className='d-flex align-items-center gap-2'><img src="/ecommerce/assets/svg/icons/category.svg" alt="" width={20} /> Categories</div>
                 </button>
             </div>
             <div className="row g-8 m-0">

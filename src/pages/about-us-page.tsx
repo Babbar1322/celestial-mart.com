@@ -14,7 +14,7 @@ const AboutUsPage: FC = () => {
 
             <div className="row">
                 <div className="col-md-6 my-auto">
-                    <img src="/assets/images/about-us.jpeg" className="w-75" />
+                    <img src="/ecommerce/assets/images/about-us.jpeg" className="w-75" />
                 </div>
                 <div className="col-md-6 my-auto">
                     <h1 className="pb-5">
@@ -39,7 +39,7 @@ const AboutUsPage: FC = () => {
                 <div className="col-md-4 my-2">
                     <div className="card">
                         <div className="card-body text-center rounded" style={{ minHeight: '250px', height: '250px' }}>
-                            <img src="/assets/images/browse.png" alt="" className="w-25 pb-3" />
+                            <img src="/ecommerce/assets/images/browse.png" alt="" className="w-25 pb-3" />
                             <h4 className="fs-3 text-center ">Browse and Select</h4>
                             <p>Explore products, add to cart selecting quantity, variants and review your order</p>
                         </div>
@@ -48,7 +48,7 @@ const AboutUsPage: FC = () => {
                 <div className="col-md-4 my-2">
                     <div className="card">
                         <div className="card-body text-center rounded" style={{ minHeight: '250px', height: '250px' }}>
-                            <img src="/assets/images/payment.avif" alt="" className="w-25 pb-3" />
+                            <img src="/ecommerce/assets/images/payment.avif" alt="" className="w-25 pb-3" />
                             <h4 className="fs-3 text-center ">Checkout and Payment</h4>
                             <p>Provide address information, select a payment method and review your order summary</p>
                         </div>
@@ -57,7 +57,7 @@ const AboutUsPage: FC = () => {
                 <div className="col-md-4 my-2">
                     <div className="card">
                         <div className="card-body text-center rounded" style={{ minHeight: '250px', height: '250px' }}>
-                            <img src="/assets/images/order.png" alt="" className="w-25 pb-3" />
+                            <img src="/ecommerce/assets/images/order.png" alt="" className="w-25 pb-3" />
                             <h4 className="fs-3 text-center ">Order Delivery</h4>
                             <p>
                                 Receive confirmation notification and tracker order status by checking estimated
