@@ -1,0 +1,17 @@
+
+
+<IfModule mod_rewrite.c>
+<IfModule mod_negotiation.c>
+        Options -MultiViews
+</IfModule>
+ 
+   RewriteEngine On
+
+  #	RewriteCond     %{SERVER_PORT} ^80$
+  #	RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+    RewriteBase /ecommerce/
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /ecommerce/index.html [L]
+</IfModule>

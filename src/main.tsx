@@ -52,7 +52,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                     <SkeletonTheme baseColor="#7d7d7d">
                         <ToastContainer autoClose={5000} position="top-right" pauseOnHover pauseOnFocusLoss />
                         {showModal && <AdultPopup />}
-                        <BrowserRouter>
+                        <BrowserRouter basename="/ecommerce">
                             <App />
                         </BrowserRouter>
                     </SkeletonTheme>
